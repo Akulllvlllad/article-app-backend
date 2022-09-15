@@ -16,11 +16,10 @@ import { UserController, PostController } from './controllers/index.js'
 
 
 
-
+//mongodb+srv://admin:wwwwww@cluster0.jgttjos.mongodb.net/app?retryWrites=true&w=majority
 mongoose
 	.connect(
-		process.env.MONGODB_URI ||
-			'mongodb+srv://admin:wwwwww@cluster0.jgttjos.mongodb.net/app?retryWrites=true&w=majority'
+		process.env.MONGODB_URI 	
 	)
 	.then(() => console.log('DB ok'))
 	.catch(err => console.log('DB error', err))
